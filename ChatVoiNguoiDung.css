@@ -1,0 +1,151 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #f5f6fa;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container chính */
+.chat-container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Sidebar */
+.chat-sidebar {
+    width: 25%;
+    background: #f1f1f1;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+}
+
+.chat-sidebar h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #444;
+}
+
+.chat-sidebar ul {
+    list-style: none;
+}
+
+.chat-sidebar li {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.chat-sidebar li:hover {
+    background: #e1e1e1;
+}
+
+.chat-sidebar li.active {
+    background: #ddd;
+    font-weight: 500;
+}
+
+/* Nội dung chính */
+.chat-main {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header */
+.chat-header {
+    background: #fafafa;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-header h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Tin nhắn */
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f9f9f9;
+}
+
+.message {
+    max-width: 70%;
+    margin-bottom: 15px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    position: relative;
+    font-size: 14px;
+}
+
+.message.user {
+    background: #e4e6eb;
+    align-self: flex-start;
+}
+
+.message.admin {
+    background: #d1f7d6;
+    align-self: flex-end;
+}
+
+.message span {
+    display: block;
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+    text-align: right;
+}
+
+/* Ô nhập */
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+    background: #fff;
+    padding: 12px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+.chat-input button {
+    margin-left: 10px;
+    padding: 10px 16px;
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.chat-input button:hover {
+    background: #45a049;
+}

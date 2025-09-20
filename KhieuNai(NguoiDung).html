@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gửi Khiếu Nại - Người Dùng</title>
+    <link rel="stylesheet" href="./KhieuNai(NguoiDung).css">
+</head>
+<body>
+    <header class="header">
+        <h1>Gửi Khiếu Nại</h1>
+    </header>
+
+    <main class="container">
+        <section class="complaint-box">
+            <h2>Thông tin khiếu nại</h2>
+            <form class="complaint-form">
+                <!-- Chọn đơn đặt chỗ hoặc dịch vụ -->
+                <label for="booking">Chọn đơn đặt chỗ hoặc dịch vụ:</label>
+                <select id="booking" name="booking" required>
+                    <option value="">-- Chọn đơn đặt chỗ --</option>
+                    <option value="res1">Nhà hàng ABC - Mã #1234</option>
+                    <option value="bar1">Quán Bar XYZ - Mã #5678</option>
+                    <option value="home1">Homestay Lovely - Mã #9012</option>
+                </select>
+
+                <!-- Nhập nội dung khiếu nại -->
+                <label for="complaint">Nhập nội dung khiếu nại:</label>
+                <textarea id="complaint" name="complaint" rows="6" placeholder="Vui lòng mô tả chi tiết vấn đề..." required></textarea>
+
+                <!-- Tải tệp minh chứng -->
+                <label for="fileUpload">Tải tệp hoặc hình ảnh (tùy chọn):</label>
+                <input type="file" id="fileUpload" name="fileUpload" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx" multiple>
+
+                <!-- Nút gửi -->
+                <button type="submit" class="submit-btn">Gửi Khiếu Nại</button>
+
+                <!-- Thông báo thành công -->
+                <p class="success-message">✅ Khiếu nại của bạn đã được gửi thành công!</p>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

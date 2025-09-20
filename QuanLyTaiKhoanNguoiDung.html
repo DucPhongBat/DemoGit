@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý tài khoản người dùng</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #b22222;
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .action-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .action-bar input {
+            padding: 8px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 4px;
+            background: #b22222;
+            color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .btn:hover {
+            background: #8b1a1a;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table thead {
+            background: #b22222;
+            color: #fff;
+        }
+        table th, table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        table tr:hover {
+            background: #f2f2f2;
+        }
+        .btn-edit {
+            background: #1e90ff;
+        }
+        .btn-edit:hover {
+            background: #187bcd;
+        }
+        .btn-delete {
+            background: #dc143c;
+        }
+        .btn-delete:hover {
+            background: #a10c2b;
+        }
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 400px;
+            text-align: center;
+        }
+        .modal-content input, .modal-content select {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .modal-content .btn {
+            width: 45%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Quản lý tài khoản người dùng</h2>
+    <div class="action-bar">
+        <input type="text" placeholder="Tìm kiếm người dùng...">
+        <button class="btn" onclick="openModal('addModal')">+ Thêm người dùng</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Họ và tên</th>
+                <th>Email</th>
+                <th>Số điện thoại</th>
+                <th>Vai trò</th>
+                <th>Trạng thái</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nguyễn Văn A</td>
+                <td>a@gmail.com</td>
+                <td>0901111111</td>
+                <td>Người dùng</td>
+                <td>Hoạt động</td>
+                <td>
+                    <button class="btn btn-edit" onclick="openModal('editModal')">Sửa</button>
+                    <button class="btn btn-delete" onclick="openModal('deleteModal')">Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Trần Thị B</td>
+                <td>b@gmail.com</td>
+                <td>0912222222</td>
+                <td>Người dùng</td>
+                <td>Khóa</td>
+                <td>
+                    <button class="btn btn-edit" onclick="openModal('editModal')">Sửa</button>
+                    <button class="btn btn-delete" onclick="openModal('deleteModal')">Xóa</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal Thêm -->
+<div class="modal" id="addModal">
+    <div class="modal-content">
+        <h3>Thêm người dùng</h3>
+        <input type="text" placeholder="Họ và tên">
+        <input type="email" placeholder="Email">
+        <input type="text" placeholder="Số điện thoại">
+        <select>
+            <option>Người dùng</option>
+            <option>Quản trị viên</option>
+        </select>
+        <select>
+            <option>Hoạt động</option>
+            <option>Khóa</option>
+        </select>
+        <div>
+            <button class="btn" onclick="closeModal('addModal')">Lưu</button>
+            <button class="btn btn-delete" onclick="closeModal('addModal')">Hủy</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Sửa -->
+<div class="modal" id="editModal">
+    <div class="modal-content">
+        <h3>Sửa thông tin</h3>
+        <input type="text" value="Nguyễn Văn A">
+        <input type="email" value="a@gmail.com">
+        <input type="text" value="0901111111">
+        <select>
+            <option selected>Người dùng</option>
+            <option>Quản trị viên</option>
+        </select>
+        <select>
+            <option selected>Hoạt động</option>
+            <option>Khóa</option>
+        </select>
+        <div>
+            <button class="btn" onclick="closeModal('editModal')">Cập nhật</button>
+            <button class="btn btn-delete" onclick="closeModal('editModal')">Hủy</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Xóa -->
+<div class="modal" id="deleteModal">
+    <div class="modal-content">
+        <h3>Bạn có chắc chắn muốn xóa?</h3>
+        <div>
+            <button class="btn btn-delete" onclick="closeModal('deleteModal')">Xóa</button>
+            <button class="btn" onclick="closeModal('deleteModal')">Hủy</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openModal(id) {
+        document.getElementById(id).style.display = 'flex';
+    }
+    function closeModal(id) {
+        document.getElementById(id).style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

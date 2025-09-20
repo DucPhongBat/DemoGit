@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Chat</title>
+    <link rel="stylesheet" href="./ChatVoiNguoiDung.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Sidebar danh sách người dùng -->
+        <div class="chat-sidebar">
+            <h2>Người dùng</h2>
+            <ul>
+                <li class="active">Nguyễn Văn A</li>
+                <li>Trần Thị B</li>
+                <li>Lê Văn C</li>
+                <li>Phạm Văn D</li>
+            </ul>
+        </div>
+
+        <!-- Vùng nội dung chat -->
+        <div class="chat-main">
+            <div class="chat-header">
+                <h3>Nguyễn Văn A</h3>
+            </div>
+
+            <div class="chat-messages">
+                <div class="message user">
+                    <p>Xin chào, tôi muốn hỏi về sản phẩm mới.</p>
+                    <span>09:15</span>
+                </div>
+                <div class="message admin">
+                    <p>Chào bạn! Bạn cần hỗ trợ thông tin gì ạ?</p>
+                    <span>09:16</span>
+                </div>
+                <div class="message user">
+                    <p>Sản phẩm có bảo hành không?</p>
+                    <span>09:17</span>
+                </div>
+            </div>
+
+            <div class="chat-input">
+                <input type="text" placeholder="Nhập tin nhắn...">
+                <button>Gửi</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

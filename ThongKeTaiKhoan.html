@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thống kê tài khoản</title>
+    <link rel="stylesheet" href="./ThongKeTaiKhoan.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Thống kê tài khoản</h1>
+
+        <!-- Bộ lọc thời gian -->
+        <div class="filter-section">
+            <label for="timeFilter">Chọn khoảng thời gian:</label>
+            <select id="timeFilter">
+                <option value="month">Theo tháng</option>
+                <option value="year">Theo năm</option>
+                <option value="custom">Tùy chỉnh</option>
+            </select>
+            <input type="date" id="startDate">
+            <input type="date" id="endDate">
+            <button class="btn primary">Áp dụng</button>
+        </div>
+
+        <!-- Thống kê -->
+        <div class="stats-grid">
+            <div class="card">
+                <h3>Số tài khoản bị xóa</h3>
+                <p class="number">45</p>
+            </div>
+            <div class="card">
+                <h3>Số phiếu khiếu nại</h3>
+                <p class="number">120</p>
+            </div>
+            <div class="card">
+                <h3>Doanh nghiệp ngừng hợp tác</h3>
+                <p class="number">10</p>
+            </div>
+            <div class="card">
+                <h3>Doanh nghiệp đang hợp tác</h3>
+                <p class="number">230</p>
+            </div>
+            <div class="card">
+                <h3>Người dùng tham gia</h3>
+                <p class="number">1,500</p>
+            </div>
+        </div>
+
+        <!-- Xuất báo cáo -->
+        <div class="export-section">
+            <button class="btn export excel">Xuất Excel</button>
+            <button class="btn export pdf">Xuất PDF</button>
+        </div>
+
+        <!-- Biểu đồ -->
+        <div class="chart-section">
+            <h2>Biểu đồ thống kê (Doanh nghiệp & Người dùng)</h2>
+            <div class="chart-placeholder">
+                <p>(Biểu đồ sẽ hiển thị tại đây)</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

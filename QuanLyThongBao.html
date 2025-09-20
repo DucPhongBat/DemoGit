@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý thông báo</title>
+    <link rel="stylesheet" href="./QuanLyThongBao.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quản lý thông báo</h1>
+
+        <!-- Form tạo và chỉnh sửa -->
+        <div class="form-section">
+            <h2>Tạo / Chỉnh sửa thông báo</h2>
+            <form id="notificationForm">
+                <div class="form-group">
+                    <label for="title">Tiêu đề:</label>
+                    <input type="text" id="title" placeholder="Nhập tiêu đề" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="content">Nội dung:</label>
+                    <textarea id="content" placeholder="Nhập nội dung thông báo" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Đối tượng nhận:</label>
+                    <select id="recipient">
+                        <option value="all">Cả hai (Người dùng & Doanh nghiệp)</option>
+                        <option value="user">Người dùng</option>
+                        <option value="business">Doanh nghiệp</option>
+                    </select>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn primary">Gửi</button>
+                    <button type="reset" class="btn secondary">Làm mới</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Danh sách thông báo -->
+        <div class="list-section">
+            <h2>Danh sách thông báo</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tiêu đề</th>
+                        <th>Nội dung</th>
+                        <th>Đối tượng</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="notificationList">
+                    <tr>
+                        <td>Khuyến mãi tháng 8</td>
+                        <td>Giảm 20% cho tất cả homestay</td>
+                        <td>Người dùng</td>
+                        <td>
+                            <button class="btn edit">Sửa</button>
+                            <button class="btn delete">Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cập nhật chính sách</td>
+                        <td>Thay đổi chính sách đặt chỗ</td>
+                        <td>Doanh nghiệp</td>
+                        <td>
+                            <button class="btn edit">Sửa</button>
+                            <button class="btn delete">Xóa</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

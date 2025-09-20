@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhận Thông Báo - Doanh Nghiệp</title>
+    <link rel="stylesheet" href="./NhanThongBao(DoanhNghiep).css">
+</head>
+<body>
+    <header class="header">
+        <h1>Doanh Nghiệp - Thông Báo</h1>
+    </header>
+
+    <main class="container">
+        <!-- Danh sách thông báo -->
+        <section class="notification-list">
+            <h2>Danh sách thông báo</h2>
+            
+            <!-- Thông báo từ khách hàng -->
+            <article class="notification unread">
+                <div class="type customer">Khách hàng</div>
+                <div class="content">
+                    <p><strong>Nguyễn Văn A</strong> đã đánh giá 5 sao cho dịch vụ của bạn.</p>
+                    <span class="time">10:30 AM - 28/08/2025</span>
+                </div>
+                <button class="mark-read">Đánh dấu đã đọc</button>
+            </article>
+
+            <article class="notification unread">
+                <div class="type admin">Admin</div>
+                <div class="content">
+                    <p>Hóa đơn #1234 đã được xác nhận và gửi tới email của bạn.</p>
+                    <span class="time">09:15 AM - 28/08/2025</span>
+                </div>
+                <button class="mark-read">Đánh dấu đã đọc</button>
+            </article>
+
+            <article class="notification read">
+                <div class="type customer">Khách hàng</div>
+                <div class="content">
+                    <p><strong>Lê Thị B</strong> yêu cầu hỗ trợ về đặt chỗ.</p>
+                    <span class="time">07:45 AM - 27/08/2025</span>
+                </div>
+                <button class="mark-read">Đánh dấu chưa đọc</button>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
+
