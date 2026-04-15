@@ -1,4 +1,4 @@
-/* Reset cơ bản 1 */
+/* Reset cơ bản  2*/
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +6,7 @@
     font-family: 'Segoe UI', sans-serif;
 }
 input[type="file"] {
+    height: 30px;
     width: 30%;
     border: 1px solid #ccc;
     padding: 10px;
